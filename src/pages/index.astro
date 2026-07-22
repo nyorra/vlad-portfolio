@@ -1,17 +1,92 @@
----
+<html lang="ru">
 
----
-
-<html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vlad-nyorraa-profile</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+
+	<body> 
+		<!--        Главный контейнер всей IDE        -->
+		<div class="ide-container">
+
+			<!--        HEADER        -->
+			<header class="ide-header">
+				<div class="window-title">vlad_portfolio.dev</div>
+				<div class="window-controls">
+					<button class="btn-control minimize">
+						<img src="/min.svg" alt="minimize" />
+					</button>
+					<button class="btn-control expand">
+						<img src="/exp.svg" alt="expand" />
+					</button>
+					<button class="btn-control close">
+						<img src="/close.svg" alt="close" />
+					</button>
+				</div>
+			</header>
+
+		</div>
 	</body>
-</html> 
+
+</html>
+
+<style>
+	body {
+		margin: 0;
+		background-color: #1e1e1e;
+		color: #fff;
+		font-family: monospace;
+	}
+
+	.ide-header {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 10px;
+		background-color: #282836;
+		border: 1px solid black;
+	}
+
+	.window-title {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 16px;
+		color: #fff;
+	}
+
+	.window-controls {
+		display: flex;
+		gap: 10px;
+	}
+
+	.btn-control {
+		background: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		border-radius: 6px;
+		overflow: hidden;
+		transition: background-color 0.15s ease;
+	}
+
+	.btn-control img {
+		width: 24px;
+		height: 24px;
+		display: block;
+	}
+
+	.minimize:hover, 
+	.expand:hover {
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+
+	.close:hover {
+		background-color: #c42b1c;
+	}
+</style>
