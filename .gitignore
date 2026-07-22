@@ -7,18 +7,24 @@ dist/
 node_modules/
 
 # logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 # environment variables
 .env
-.env.production
+.env.*
+!.env.example
 
-# macOS-specific files
+# system files
 .DS_Store
+Thumbs.db
 
-# jetbrains setting folder
+# IDEs and editors
 .idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
